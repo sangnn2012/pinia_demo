@@ -5,5 +5,10 @@ export const useUserStore = defineStore('UserStore', {
         return {
             user: 'Sang Nguyen',
         }
+    },
+    getters: {
+        firstName() {
+            return this.user.split(' ')[0];
+        }
     }
 })
